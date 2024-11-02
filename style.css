@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: #121212;
+
+    & main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    & img {
+        width: 95px;
+        height: 95px;
+        position: absolute;
+        top: 18vh;
+    }
+}
+
+
+
+#hour-container {
+    display: flex;
+    position: relative;
+    align-items: baseline;
+    font-weight: 900;
+    font-size: 1em;
+    color: #DCDCDC !important;
+    font-size: 10em;
+    margin-bottom: 1rem;
+
+    & .milisecondsnumber {
+        position: relative;
+        color: #AAAAAA !important;
+        font-size: 0.7em;
+    }
+
+    & .divisor {
+        font-size: 0.8em;
+    }
+}
+
+#buttons-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 5vw;
+    position: relative;
+
+    & button:not(#start-b) {
+        display: none;
+    }
+
+    & button {
+        width: 200px;
+        height: 65px;
+        background-color: #5F38EE;
+        border: none;
+        border-radius: 45px;
+        color: white;
+        font-size: 1.6em;
+        cursor: pointer;
+    }
+
+    & button:hover {
+        opacity: 70%;
+    }
+
+    & button:active {
+        opacity: 50%;
+    }
+
+    & #stop-b {
+        background-color: #AF0F31;
+    }
+}
+
+
+@media screen and (max-width:560px) {
+
+    #hour-container {
+        font-size: 6em;
+    }
+
+    main {
+        & img {
+            height: 80px;
+            width: 80px;
+        }
+
+    }
+
+    #buttons-container {
+        & button {
+            width: 175px;
+            height: 53px;
+        }
+    }
+}
